@@ -645,6 +645,24 @@
         data-site-key="inom_lak_7c0e969e3ec1433d86cb7904d6e9bdeb"
         data-target="#inom-lead-form" async></script>
 <!-- End iNOM Lead Form -->
+
+<!-- iNOM Chat Widget - Add this before closing </body> tag -->
+  <script id="inom-chat-widget" assistant-id="019f6455-7deb-77e4-abda-98a6219faa5b">
+    (function() {
+      var scriptTag = document.getElementById('inom-chat-widget');
+      var assistantId = scriptTag.getAttribute('assistant-id');
+      window.InomChatWidget = {
+        assistantId: assistantId
+      };
+      var s = document.createElement('script');
+      s.src = 'https://dev-app.inom.ai/widgets/website-ai-assistant/widget.min.js';
+      s.async = true;
+      s.defer = true;
+      document.body.appendChild(s);
+    })();
+  </script>
+  <!-- End iNOM Chat Widget -->
+
   
 </body>
 </html>
