@@ -663,6 +663,22 @@
   </script>
   <!-- End iNOM Chat Widget -->
 
+  <!-- iNOM Chat Widget - Add this before closing </body> tag -->
+  <script id="inom-chat-widget" assistant-id="019f7fdf-3bd8-7bb8-980b-efbad67eb342">
+    (function() {
+      var scriptTag = document.getElementById('inom-chat-widget');
+      var assistantId = scriptTag.getAttribute('assistant-id');
+      window.InomChatWidget = {
+        assistantId: assistantId
+      };
+      var s = document.createElement('script');
+      s.src = 'https://app.inom.ai/widgets/inom/widget.min.js';
+      s.async = true;
+      s.defer = true;
+      document.body.appendChild(s);
+    })();
+  </script>
+  <!-- End iNOM Chat Widget -->
   
 </body>
 </html>
